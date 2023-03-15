@@ -1,0 +1,21 @@
+and , or
+
+and == &&  둘 다 참인 경우에만 true, 나머지는 false 
+or == ||   둘 다 거짓 경우에만 false, 나머지는 true
+
+문자나 숫자 등 다른 자료형을 불 값으로 형 변환 하고 싶은때는
+1. Boolean(자료형);
+2. !!(자료형);
+
+*불 값으로 형 변환 했을때false 인 자료형 : false, ''(빈문자열), 0, NaN, undefined, null, document.all
+
+이 외에 모든 것은 true가 나온다.
+
+undefined 와 null
+
+undefined = 돌려줄것이 없으면 undefined를 돌려준다.
+
+null = 의도적으로 빈 값을 넣을때 자주 사용된다.
+typeof null == object (아주 유명한 버그, 원래는 null이 나와야한다.)
+
+
