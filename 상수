@@ -1,0 +1,25 @@
+//상수(constant) : 변하지 않는 수
+//상수의 예약어 : const, var
+//ex)
+// const value = "상수";
+//    value = "변수";
+//    console.log(value);
+//TypeError: Assignment to constant variable.    
+
+//var : let 과 비슷한 역할 
+
+/* 퀴즈
+    a 와 b 라는 변수에 어떠한 값이 들어있다.
+    두 변수의 값을 서로 바꿔보아라
+
+    *힌트 두 값을 바꾸기 위해서는 변수 하나를 더 만들어야한다.
+*/
+//정답
+let a = 3;
+let b = 4;
+let c = a;
+a = b;
+b = c;
+
+console.log(a);
+console.log(b);
