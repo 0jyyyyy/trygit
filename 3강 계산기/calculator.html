@@ -39,6 +39,37 @@
         <button id="multiply">x</button>
     </div>
 <script>
-        
+    let numOne = '';
+    let operator = '';
+    let numTwo = '';
+    const $operator = document.querySelector('#operatior');
+    const $result = document.querySelector('#result');
+    const onClickNumber = (number/*매개변수인 number를 넣어서 중복코드를 줄인다.*/) => // (number) => () => 의미는 함수(onClickNumber) 안에 함수(return)가있다.
+        () => {
+            if (operator){ //비어있지 않다면
+                numTwo += number;
+            }else{ //operator 변수가 비어있다면
+                numOne += number;
+            }
+            $result.value += number;
+         //함수 자리를 리턴해야하기때문에  함수 안에 함수를 넣는다.
+    };
+    // 고차 함수 (high order function)
+    document.querySelector('#num-0').addEventListener('click', onClickNumber('0')); 
+    document.querySelector('#num-1').addEventListener('click', onClickNumber('1')); 
+    document.querySelector('#num-2').addEventListener('click', onClickNumber('2')); 
+    document.querySelector('#num-3').addEventListener('click', onClickNumber('3')); 
+    document.querySelector('#num-4').addEventListener('click', onClickNumber('4')); 
+    document.querySelector('#num-5').addEventListener('click', onClickNumber('5')); 
+    document.querySelector('#num-6').addEventListener('click', onClickNumber('6')); 
+    document.querySelector('#num-7').addEventListener('click', onClickNumber('7')); 
+    document.querySelector('#num-8').addEventListener('click', onClickNumber('8')); 
+    document.querySelector('#num-9').addEventListener('click', onClickNumber('9')); 
+    document.querySelector('#plus').addEventListener('click', () => {}); 
+    document.querySelector('#minus').addEventListener('click', () => {}); 
+    document.querySelector('#divide').addEventListener('click', () => {}); 
+    document.querySelector('#multiply').addEventListener('click', () => {}); 
+    document.querySelector('#calculate').addEventListener('click', () => {}); 
+    document.querySelector('#clear').addEventListener('click', () => {}); 
 </script>
 </body>
