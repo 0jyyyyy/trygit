@@ -5,3 +5,41 @@
  *  하나도 겹치는게 없으면 아웃, 다 맞추면 홈런
  * 
  */
+
+/**
+ * 퀴즈
+ *  2 ~ 5 까지의 숫자를 뽑고 싶다. 제대로 동작하도록 (가) ~ (라)를 모두 채우세요
+ * 
+ * 코드 1
+ * const answer = [];
+ * for(let n = 0; n < (가); n++){
+ *  answer.push(n + 2);
+ * }
+ * 
+ * 정답 : 4
+ * 
+ * 
+ * 코드 2
+ * const answer = [];
+ * for(let n = 0; n <= (나); n++){
+ *  answer.push(n + 2);
+ * }
+ * 
+ * 정답 : 3
+ * 
+ * 코드 3
+ * const answer = [];
+ * for(let n = 1; n < (다); n++){
+ *  answer.push(n + 1);
+ * }
+ * 
+ * 정답 : 5
+ * 
+ * 코드 4
+ * const answer = [];
+ * for(let n = 1; n <= (라); n++){
+ *  answer.push(n + 1);
+ * }
+ * 
+ * 정답 : 4
+ */
