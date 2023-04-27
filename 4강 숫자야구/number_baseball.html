@@ -15,7 +15,7 @@
         const $logs = document.querySelector('#logs');
 
         const numbers = []; // 배열을 쓰는 경우는 단순히 데이터의 값만 쓸때 사용한다.
-        for(let n = 0; n <=9; n += 1){
+        for(let n = 0; n < 9; n += 1){
             numbers.push(n + 1);
         }
         const answer = [];
@@ -53,11 +53,24 @@
                 return;  
             }
             if(tries.length >= 9) {
-                const message = document.createTextNode("Lose! 정답은 ${answer.join('')}");
+                const message = document.createTextNode(`Lose! 정답은 ${answer.join('')}`);
                 $logs.appendChild(message);
                 return;
             }
             // 몇 스트라이크 몇 볼인지 검사
+            let strike = 0;
+            let ball = 0;
+            for(let i = 0; i < answer.length; i++) {
+                const index = value.indexOf(answer[i]);
+                if(index > -1){ //일치하는 숫자 발견
+                    if(index === i){// 자릿수도 같음
+                        strike += 1;
+                    }else{ // 숫자만 같음
+                        ball += 1;
+                    }
+                }
+            }
+            $logs.append(`${value}: ${strike} 스트라이크 ${ball} 볼`,document.createElement('br'));
             tries.push(value);
         });
     </script>
