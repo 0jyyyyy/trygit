@@ -24,8 +24,25 @@
  * '2345'.includes(3) === true;
  * ['2','3','4','5'].includes(5) === false;
  * 
- * 4. forEach 와 map
- *  다른 강좌에서 설명
+ * 4. forEach 와 map, fill
+ *  forEach : 기본형태 EX) 배열명.forEach((element:요소 , index: 순서) => {
+ * 
+ *                                      })
+ *  forEach는 인수로 함수를 받고, 배열의 요소 하나 하나에 인수로 받은 함수를 각각 적용한다. 이 때 요소 순서대로 함수를 적용하므로 반복문의 역할을 한다.
+ *  배열 요소를 반복하는데, 요소 하나하나에 실행
+ * 
+ *  map : 기본형태 EX) 배열명.map((element, index) => {
+ *                  
+ *  })
+ *  map은 forEach의 역할도 하면서, return이 있기 때문에 return에 적혀있는 새로운 배열을 만든다.
+ * 
+ *  fill : 기본형태 EX) 배열(9): 길이가 9인 빈배열.fill(넣고싶은 값)
+ * 
+ *  map과 fill을 이용한 1~9까지 값 넣기
+ * 
+ *  Array(9).fill(0).map((el,idx) =>{
+ *      return idx + 1;
+ * })
  * 
  * 5. document.createElement, document.createTextNode
  *  각각 태그와 텍스트를 만드는 메서드
